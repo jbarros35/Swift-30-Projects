@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             OperationQueue.main.addOperation({ () -> Void in
                 if let weatherData = data {
                     self.weatherLabel.text = weatherData.weather.capitalized
-                    self.temperatureLabel.text = String(format: "%d", weatherData.temperature) + "\u{00B0}"
+                    self.temperatureLabel.text = "\(weatherData.temperature)\u{00B0}"
                 }
             })
         })
