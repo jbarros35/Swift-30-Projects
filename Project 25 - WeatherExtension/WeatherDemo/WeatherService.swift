@@ -46,7 +46,7 @@ open class WeatherService {
         }
         
         let jsonMain = jsonResult?["main"] as! Dictionary<String, AnyObject>
-        weatherData.temperature = jsonMain["temp"] as! Int
+        weatherData.temperature = jsonMain["temp"] as! Double
         
         completion(weatherData)
         
